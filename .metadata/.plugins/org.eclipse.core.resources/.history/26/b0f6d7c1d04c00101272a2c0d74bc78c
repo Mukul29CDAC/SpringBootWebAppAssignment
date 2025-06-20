@@ -1,0 +1,10 @@
+package com.cdac.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cdac.bean.ProductId;
+import com.cdac.bean.Products;
+
+public interface ProductRepo extends JpaRepository<Products, ProductId> {
+
+}

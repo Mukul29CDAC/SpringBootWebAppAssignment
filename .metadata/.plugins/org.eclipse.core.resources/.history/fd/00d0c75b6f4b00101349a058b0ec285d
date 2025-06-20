@@ -1,0 +1,13 @@
+package com.cdac.userservice;
+
+import com.cdac.repository.UsersRepo;
+
+public interface UserServiceLayer {
+	
+	UsersRepo ;
+	
+	public String getUserName() {	
+		return null;
+	}
+
+}

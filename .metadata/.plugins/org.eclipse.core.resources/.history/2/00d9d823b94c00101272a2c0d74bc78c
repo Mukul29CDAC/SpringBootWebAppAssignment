@@ -1,0 +1,11 @@
+package com.cdac.bean;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class ProductKey {
+	
+	
+	int categoryId;
+	int productId;
+}

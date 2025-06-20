@@ -1,0 +1,12 @@
+package com.cdac.bean;
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Products")
+public class Products {
+	
+	@
+}

@@ -1,0 +1,60 @@
+package com.cdac.controller;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.cdac.bean.Users;
+import com.cdac.dto.UserDTO;
+import com.cdac.userserviceimpl.UserServiceImpl;
+
+import jakarta.servlet.annotation.MultipartConfig;
+
+@RestController
+
+public class UsersController  {
+	private final RestTemplate restTemplate = new RestTemplate();
+	
+	@Autowired
+	SessionFactory hibernateFactory;
+	
+	@Autowired
+	UserServiceImpl user;
+	
+	
+	@GetMapping("/login/{username}/{password}")
+	public void authenticate(@PathVariable("username") String name,@PathVariable("username") String pass) {
+		user.login(name,pass);
+	}
+	
+	
+	@GetMapping("/getUsers")
+	public List<UserDTO> getUser() {
+		return user.getAllUsers();
+		
+	}
+	
+	@GetMapping("/getOneUser")
+	public UserDTO getoneUsers(){
+		 return user.getOneUser("anni");
+		
+	}
+
+	@PostMapping("/addData")
+	public String addData(@RequestBody Users objUser) {
+		
+		user.addData(objUser);
+		return "data add has been";
+		
+	}
+
+}

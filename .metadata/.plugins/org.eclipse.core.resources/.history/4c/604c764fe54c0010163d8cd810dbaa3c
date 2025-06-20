@@ -1,0 +1,34 @@
+package com.cdac.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cdac.bean.ProductId;
+import com.cdac.bean.Products;
+import com.cdac.productserviceimpl.ProductServiceImpl;
+
+@RestController
+@RequestMapping("/product")
+public class ProductController {
+	
+	@Autowired
+	ProductServiceImpl service;
+	
+	@GetMapping("/allProducts")
+	public List<Products> getProducts(){
+		List<Products> all =  service.getProducts();
+		return all;
+	}
+	
+	@PostMapping("/addProduct")
+	public String addProduct(@RequestBody Product prod) {
+		
+	}
+	
+
+}

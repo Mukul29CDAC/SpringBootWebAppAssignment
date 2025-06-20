@@ -1,0 +1,14 @@
+package com.cdac.userservice;
+
+import java.util.List;
+
+import com.cdac.bean.Users;
+import com.cdac.repository.UsersRepo;
+
+public interface UserServiceLayer{
+		
+	Users getOneUser(String username);
+	List<Users> getAllUsers();
+	
+
+}

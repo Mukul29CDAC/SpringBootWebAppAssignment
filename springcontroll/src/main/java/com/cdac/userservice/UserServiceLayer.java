@@ -1,0 +1,22 @@
+package com.cdac.userservice;
+
+import java.util.List;
+
+import com.cdac.bean.Users;
+import com.cdac.dto.UserDTO;
+import com.cdac.repository.UsersRepo;
+
+
+
+public interface UserServiceLayer{
+		
+	 boolean login(Users user);
+	
+	UserDTO getOneUser(String username);
+	
+	List<UserDTO> getAllUsers();
+	
+	void addData(Users u);
+	
+
+}

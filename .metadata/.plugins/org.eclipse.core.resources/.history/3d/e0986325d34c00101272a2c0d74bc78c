@@ -1,0 +1,13 @@
+package com.springproduct.productspring;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication(scanBasePackageClasses = {"com.cdac.controller")
+public class ProductspringApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProductspringApplication.class, args);
+	}
+
+}

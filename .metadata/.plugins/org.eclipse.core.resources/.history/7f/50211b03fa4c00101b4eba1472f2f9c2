@@ -1,0 +1,90 @@
+package com.cdac.bean;
+
+
+import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Products")
+public class Products {
+	
+	ProductId prodId;
+	@EmbeddedId
+	ProductId productId;
+	
+	@Column(name = "categoryid")
+//	int categoryId;
+//	
+//	@Column(name="productid")
+//	int productId;
+	
+	@Column(name="productname")
+	String productname;
+	
+	@Column(name="productdesc")
+	String productdesc;
+	
+	@Column(name="productprice")
+	int productprice;
+	
+	@Column(name="productimage")
+	String prodeuctimage;
+
+	public Products() {
+		super();
+	}
+
+	public Products(int categoryId, int productId, String productname, String productdesc, int productprice,
+			String prodeuctimage) {
+		super();
+		this.prodId = new ProductId(categoryId,productId) ;
+		this.productname = productname;
+		this.productdesc = productdesc;
+		this.productprice = productprice;
+		this.prodeuctimage = prodeuctimage;
+	}
+
+	public ProductId getProductId() {
+		return productId;
+	}
+
+	public void setProductId(ProductId productId) {
+		this.productId = productId;
+	}
+
+	public String getProductname() {
+		return productname;
+	}
+
+	public void setProductname(String productname) {
+		this.productname = productname;
+	}
+
+	public String getProductdesc() {
+		return productdesc;
+	}
+
+	public void setProductdesc(String productdesc) {
+		this.productdesc = productdesc;
+	}
+
+	public int getProductprice() {
+		return productprice;
+	}
+
+	public void setProductprice(int productprice) {
+		this.productprice = productprice;
+	}
+
+	public String getProdeuctimage() {
+		return prodeuctimage;
+	}
+
+	public void setProdeuctimage(String prodeuctimage) {
+		this.prodeuctimage = prodeuctimage;
+	}
+	
+	
+}

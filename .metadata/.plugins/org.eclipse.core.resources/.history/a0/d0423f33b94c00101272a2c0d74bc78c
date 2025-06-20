@@ -1,0 +1,13 @@
+package com.cdac.bean;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class ProductId implements Serializable{
+	
+	
+	int categoryId;
+	int productId;
+}

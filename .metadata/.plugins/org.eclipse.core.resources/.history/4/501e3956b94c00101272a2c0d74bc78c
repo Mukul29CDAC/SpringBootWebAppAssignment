@@ -1,0 +1,23 @@
+package com.cdac.bean;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class ProductId implements Serializable{
+	
+	@Column(name = "categoryId")
+	int categoryId;
+	
+	@Column(name="productId")
+	int productId;
+
+	public ProductId() {
+		super();
+	}
+	
+	
+	
+}

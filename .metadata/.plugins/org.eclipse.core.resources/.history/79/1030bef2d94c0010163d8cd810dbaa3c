@@ -1,0 +1,15 @@
+package com.cdac.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class UesrConnectController {
+	private final RestTemplate restTemplate = new RestTemplate();
+	
+	@GetMapping("/allProducts")
+	public String allProducts() {
+		return restTemplate.getForObject("http://localhost:8080/product/data", null);
+	}
+}

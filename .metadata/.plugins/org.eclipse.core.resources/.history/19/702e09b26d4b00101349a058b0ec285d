@@ -1,0 +1,9 @@
+package com.cdac.userservice;
+
+import com.cdac.repository.UsersRepo;
+
+public interface UserServiceLayer {
+	
+	UserRepo userRepo = new UserRepo()
+
+}

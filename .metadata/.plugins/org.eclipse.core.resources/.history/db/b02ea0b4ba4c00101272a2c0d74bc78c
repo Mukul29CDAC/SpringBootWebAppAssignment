@@ -1,0 +1,27 @@
+package com.cdac.bean;
+
+
+import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Products")
+public class Products {
+	
+	@EmbeddedId
+	ProductId productId;
+	
+	@Column(name="productname")
+	String productname;
+	
+	@Column(name="productdesc")
+	String productdesc;
+	
+	@Column(name="productimage")
+	String productimage;
+	
+	@Column(name="productname")
+	String price;
+}

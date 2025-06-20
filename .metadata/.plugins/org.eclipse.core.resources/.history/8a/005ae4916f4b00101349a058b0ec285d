@@ -1,0 +1,11 @@
+package com.cdac.userservice;
+
+import com.cdac.bean.Users;
+import com.cdac.repository.UsersRepo;
+
+public interface UserServiceLayer{
+		
+	Users getOneUser();
+	
+
+}

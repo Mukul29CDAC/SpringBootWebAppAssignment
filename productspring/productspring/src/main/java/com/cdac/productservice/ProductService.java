@@ -1,0 +1,18 @@
+package com.cdac.productservice;
+import java.util.List;
+
+import java.util.Optional;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.cdac.bean.ProductId;
+import com.cdac.bean.Products;
+
+
+public interface ProductService {
+	
+	List<Products> getProducts();
+	String addProduct(Products p);
+	Products getById(ProductId id);
+}

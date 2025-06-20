@@ -1,0 +1,8 @@
+package com.cdac.bean;
+
+public class ProductKey {
+	
+	
+	int categoryId;
+	int productId;
+}

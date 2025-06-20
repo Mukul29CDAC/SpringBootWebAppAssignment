@@ -1,0 +1,10 @@
+package com.cdac.productservice;
+
+import java.util.List;
+
+import com.cdac.bean.Products;
+
+public class ProductService {
+	
+	List<Products> getProducts();
+}

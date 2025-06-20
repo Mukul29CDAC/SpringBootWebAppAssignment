@@ -1,0 +1,9 @@
+package com.cdac.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+
+@Repository
+public class UsersRepo implements CrudRepository<Users, String> {
+
+}
